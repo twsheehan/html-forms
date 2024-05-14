@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Front-end foundations: HTML forms</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <main>
+      <h1>Ski Form</h1>
+      <p>
+        Required fields are followed by
+        <strong><span aria-label="required">*</span></strong
+        >.
+      </p>
+      <form>
+        <label for="name">Name:</label>
+        <input id="name" type="text" name="name" />
+        <label for="location">Email:</label>
+        <input
+          id="location"
+          type="text"
+          name="zipcode"
+          maxlength="250"
+          autofocus
+          required
+        />
+        <strong><span aria-label="required">*</span></strong>
+        <fieldset>
+          <legend>Do you ski?</legend>
+          <ul>
+            <li>
+              <input type="radio" id="skiYes" name="ski" value="yes" />
+              <label for="skiYes">Yes</label>
+            </li>
+            <li>
+              <input type="radio" id="skiNo" name="ski" value="no" />
+              <label for="skiNo">No</label>
+            </li>
+          </ul>
+        </fieldset>
+        <label for="form-message">Why not?:</label>
+        <textarea
+          id="form-message"
+          name="message"
+          required
+          maxlength="200"
+        ></textarea>
+        <section>
+          <h2>Form Actions</h2>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
